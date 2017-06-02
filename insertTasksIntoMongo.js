@@ -9,7 +9,7 @@ mongoose.connection.on('error', err => {
 })
 
 require('./models/Task')
-const Task = mongoose.model('Tasks')
+const Task = mongoose.model('Task')
 
 const parseFile = require('./utils/utils').parseFile
 ;(async () => {
@@ -25,4 +25,5 @@ const parseFile = require('./utils/utils').parseFile
   }))
   const res = await Task.insertMany(insertArray)
   console.log(`Inserted ${res.length} Tasks records`)
+  mongoose.disconnect()
 })()

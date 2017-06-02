@@ -9,7 +9,7 @@
     "mongoose": "^4.10.4"
   },
   "scripts": {
-    "dataToMongo": "node ./dataToMongo.js",
+    "insertTasksIntoMongo": "node ./insertTasksIntoMongo.js",
     "start": "node ./start.js"
   }
 }
