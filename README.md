@@ -4,3 +4,4 @@
 2. npm run start - запускает сервер, после можно открыть http://localhost:7777/tasks в браузере будет JSON из Монго.
 
 ВАЖНО - insertTasksIntoMongo не бросает коллекцию, а добавляет к имеющимся.
+Функция парсер - в utils/utils.js parseFile
