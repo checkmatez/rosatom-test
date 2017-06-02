@@ -13,7 +13,13 @@ const Task = mongoose.model('Task')
 
 const parseFile = require('./utils/utils').parseFile
 ;(async () => {
-  const data = await parseFile('./График СМР.xer')
+  let data = {}
+  try {
+    data = await parseFile('./График СМР.xer')
+  } catch (error) {
+    console.error(error)
+    return
+  }
   if (!data.TASK) return // Сохраняем только TASK
 
   // Только 4 поля
